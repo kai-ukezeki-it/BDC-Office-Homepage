@@ -56,14 +56,15 @@ export default function Access() {
 
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* 地図・画像セクション */}
+            {/* 地図・画像セクション（3分割） */}
             <div className="space-y-6 animate-on-scroll delay-100">
+              {/* 上段：メイン画像 */}
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#a1d8e2] to-[#68a9cf] rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <div className="aspect-[4/3] w-full">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202025-07-01%2016.10.42-PhSx65XZ0Ujzc3GUbdjPlNT0MYjqwg.png"
+                      src="/office-exterior.png"
                       alt="京田辺アプリ開発ラボ The Cure オフィス外観"
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -72,6 +73,42 @@ export default function Access() {
                   </div>
                 </div>
               </div>
+
+              {/* 下段：2つの画像 */}
+              <div className="grid grid-cols-2 gap-4">
+                {/* 左側画像 */}
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-[#a1d8e2] to-[#68a9cf] rounded-2xl blur opacity-20 group-hover:opacity-35 transition duration-1000"></div>
+                  <div className="relative rounded-xl overflow-hidden shadow-xl">
+                    <div className="aspect-[4/3] w-full">
+                      <Image
+                        src="/placeholder.svg"
+                        alt="オフィス詳細画像1"
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-custom-950/30 to-transparent"></div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 右側画像 */}
+                <div className="relative group">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-[#68a9cf] to-[#a1d8e2] rounded-2xl blur opacity-20 group-hover:opacity-35 transition duration-1000"></div>
+                  <div className="relative rounded-xl overflow-hidden shadow-xl">
+                    <div className="aspect-[4/3] w-full">
+                      <Image
+                        src="/placeholder.svg"
+                        alt="オフィス詳細画像2"
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-custom-950/30 to-transparent"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
               <Button
                 className="w-full bg-[#ffdc00] hover:bg-[#ffdc00]/90 text-custom-950 font-bold py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
