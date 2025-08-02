@@ -41,7 +41,7 @@ export default function ContactForm() {
         attribute: formState.attribute,
         affiliation: formState.affiliation,
         message: formState.message,
-        to: "kai.ukezeki@luvo.co.jp",
+        to: "itimainasuiti@gmail.com",
       }
 
       const response = await fetch("/api/send-email", {

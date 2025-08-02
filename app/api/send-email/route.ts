@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     // メール内容
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: to || 'kai.ukezeki@luvo.co.jp',
+      to: to || 'itimainasuiti@gmail.com',
       subject: `【BDC】新しいお問い合わせ - ${name}様より`,
       html: `
         <h2>新しいお問い合わせが届きました</h2>

@@ -102,10 +102,10 @@ export default function Footer() {
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-[#a1d8e2] mr-3" />
                 <a
-                  href="mailto:kai.ukezeki@luvo.co.jp"
+                  href="mailto:itimainasuiti@gmail.com"
                   className="text-gray-300 hover:text-[#ffdc00] transition-colors duration-300 text-sm"
                 >
-                  kai.ukezeki@luvo.co.jp
+                  itimainasuiti@gmail.com
                 </a>
               </div>
               <div className="flex items-start">

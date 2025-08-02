@@ -79,7 +79,7 @@ git push origin main
 ## お問い合わせフォーム
 
 ### 機能
-- フォーム送信 → メール通知（kai.ukezeki@luvo.co.jp）
+- フォーム送信 → メール通知（itimainasuiti@gmail.com）
 - 送信完了画面の表示
 - エラーハンドリング
 
@@ -130,5 +130,5 @@ git push origin main
 Private - 興戸アプリ開発ラボ BDC
 
 ## お問い合わせ
-- Email: kai.ukezeki@luvo.co.jp
+- Email: itimainasuiti@gmail.com
 - 住所: 〒610-0332 京都府京田辺市興戸和井田56-1 A&Kビル 201 
