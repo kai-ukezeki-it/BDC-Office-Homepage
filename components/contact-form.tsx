@@ -78,11 +78,11 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="py-32 bg-gradient-to-br from-[#a1d8e2] via-[#68a9cf] to-custom-900 relative overflow-hidden text-white"
+      className="py-20 bg-gradient-to-br from-[#a1d8e2] via-[#68a9cf] to-custom-900 relative overflow-hidden text-white"
     >
       <div className="container px-4 mx-auto relative z-10">
         {/* セクションヘッダー */}
-        <div className="text-center mb-16 animate-on-scroll">
+        <div className="text-center mb-12 animate-on-scroll">
           <div className="inline-flex items-center mb-6">
             <div className="w-8 h-1 bg-[#a1d8e2] mr-3"></div>
             <span className="text-[#a1d8e2] font-bold text-lg tracking-wider uppercase">Contact</span>
@@ -98,7 +98,7 @@ export default function ContactForm() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/15 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-white/20 animate-on-scroll">
             {submitted ? (
-              <div className="p-12 text-center">
+              <div className="p-8 text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#ffdc00]/20 mb-6 border-2 border-[#ffdc00]">
                   <CheckCircle className="h-10 w-10 text-[#ffdc00]" />
                 </div>
@@ -110,8 +110,8 @@ export default function ContactForm() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="p-8 md:p-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <form onSubmit={handleSubmit} className="p-6 md:p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="space-y-3">
                     <Label htmlFor="name" className="text-white font-semibold flex items-center">
                       <User className="w-4 h-4 mr-2" />
@@ -188,7 +188,7 @@ export default function ContactForm() {
                   </RadioGroup>
                 </div>
 
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-6">
                   <Label htmlFor="affiliation" className="text-white font-semibold">
                     所属・詳細
                   </Label>
@@ -202,7 +202,7 @@ export default function ContactForm() {
                   />
                 </div>
 
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-6">
                   <Label htmlFor="message" className="text-white font-semibold">
                     メッセージ <span className="text-[#ffdc00]">*</span>
                   </Label>

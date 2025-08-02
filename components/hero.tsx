@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="relative w-full min-h-[100vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-custom-950 via-custom-900 to-custom-800 text-white">
       {/* トップナビゲーション */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-[#302833]/95 backdrop-blur-md border-b border-[#a1d8e2]/20 shadow-xl">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-[#302833] backdrop-blur-md border-b border-[#a1d8e2]/20 shadow-xl">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <a
             href="#"
@@ -70,12 +70,12 @@ export default function Hero() {
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/hero-background.jpg')",
+            backgroundImage: "url('/hero-background-new.png')",
           }}
         ></div>
 
         {/* 動的グラデーションオーバーレイ */}
-        <div className="absolute inset-0 bg-gradient-to-br from-custom-950/80 via-custom-900/70 to-[#68a9cf]/20 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-custom-950/90 via-custom-900/85 to-[#68a9cf]/40 z-10"></div>
 
         {/* 動的な幾何学パターン */}
         <div className="absolute inset-0 z-5 opacity-20">

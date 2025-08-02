@@ -22,14 +22,14 @@ export default function TechEnvironment() {
       description:
         "AWSをメインプラットフォームとし、PythonとTypeScriptによるフルスタック開発を実践。FastAPI/Djangoでの高性能バックエンド構築から、Next.js/Reactでのモダンフロントエンド開発まで、Docker/Kubernetesによるコンテナ化とGitHub Actionsでの自動デプロイにより、安定した本番環境への継続的デリバリーを実現しています。",
       icon: <Cloud className="h-8 w-8" />,
-      color: "#a1d8e2",
+      color: "#68a9cf",
     },
     {
       title: "次世代プロトタイピング環境",
       description:
         "v0やGenspark等の最新AI設計ツールを導入し、アイデアから実装までの時間を大幅に短縮。従来数週間かかっていたプロトタイプ開発を数日で完了させ、クライアントとの迅速な検証サイクルを可能にしています。",
       icon: <Rocket className="h-8 w-8" />,
-      color: "#68a9cf",
+      color: "#a1d8e2",
     },
   ]
 

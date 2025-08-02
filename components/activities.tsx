@@ -24,16 +24,16 @@ export default function BusinessContent() {
       description:
         "複数ECプラットフォームにおいて、既存統合ツールでは対応できない企業独自の業務フローに特化したシステムを開発します。各プラットフォームのAPI連携により売上データ、在庫情報、顧客分析を統一ダッシュボードで管理し、既存SaaSでは実現困難なカスタム分析や独自KPI可視化、企業特有のデータ連携要件に対応しています。",
       icon: <ShoppingCart className="h-10 w-10" />,
-      color: "#a1d8e2",
-      bgGradient: "from-[#a1d8e2]/20 to-[#a1d8e2]/5",
+      color: "#68a9cf",
+      bgGradient: "from-[#68a9cf]/20 to-[#68a9cf]/5",
     },
     {
       title: "業務効率化ツール開発",
       description:
         "日常業務の中で発生する繰り返し作業をRPAやAIで自動化するツールを開発。文書作成の自動化、KPIデータの可視化、顧客対応の効率化など、人間がより創造的な業務に集中できる環境を提供します。導入から運用まで継続的にサポートします。",
       icon: <Zap className="h-10 w-10" />,
-      color: "#68a9cf",
-      bgGradient: "from-[#68a9cf]/20 to-[#68a9cf]/5",
+      color: "#a1d8e2",
+      bgGradient: "from-[#a1d8e2]/20 to-[#a1d8e2]/5",
     },
   ]
 

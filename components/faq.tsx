@@ -38,10 +38,10 @@ export default function Faq() {
     <section id="faq" className="py-20 bg-white">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-navy-900">よくある質問</h2>
-          <div className="w-20 h-1 bg-orange-500 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            LUVO Kyotanabe Labについてよくいただく質問をまとめました。
+          <h2 className="text-4xl md:text-6xl font-black mb-8 text-custom-950">よくある質問</h2>
+          <div className="w-20 h-1 bg-[#a1d8e2] mx-auto mb-8"></div>
+          <p className="text-xl text-custom-700 max-w-3xl mx-auto">
+            興戸アプリ開発ラボ BDCについてよくいただく質問をまとめました。
             他にも質問がある方は、お気軽にお問い合わせください。
           </p>
         </div>

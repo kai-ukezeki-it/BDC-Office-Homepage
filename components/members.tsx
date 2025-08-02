@@ -221,7 +221,7 @@ export default function Members() {
 
       <div className="container px-4 mx-auto relative z-10">
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">メンバー紹介</h2>
+          <h2 className="text-4xl md:text-6xl font-black mb-8 text-white">メンバー紹介</h2>
           <div className="w-20 h-1 bg-[#a1d8e2] mx-auto mb-8"></div>
           <p className="text-lg text-blue-100 max-w-3xl mx-auto">
             BDCには、多様なバックグラウンドを持つ学生エンジニアが集まっています。未経験からスタートしたメンバーも多く、実務を通じて「AI時代のエンジニア」として成長を続けています。
