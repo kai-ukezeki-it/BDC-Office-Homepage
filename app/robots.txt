@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bdc-office.railway.app/sitemap.xml
+
+# クロール対象外
+Disallow: /api/
+Disallow: /_next/
+Disallow: /favicon.ico 
