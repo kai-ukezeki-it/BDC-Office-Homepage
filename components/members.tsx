@@ -17,14 +17,14 @@ function InfiniteScrollMembers({ members }: { members: any[] }) {
     const scrollContainer = scrollRef.current
     if (!scrollContainer) return
 
-    // 初期位置を中央（2番目のセット）に設定
-    const cardWidth = 300 + 24 // カード幅 + gap
-    scrollContainer.scrollLeft = members.length * cardWidth
+    // 初期位置を中央（2番目のセット）の最初（請関）に正確に設定
+    const cardWidth = 450 + 32 // カード幅(450px) + gap(32px) 
+    const sectionWidth = members.length * cardWidth
+    scrollContainer.scrollLeft = sectionWidth // 2番目のセットの開始位置
 
     const handleScroll = () => {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainer
       const maxScroll = scrollWidth - clientWidth
-      const sectionWidth = members.length * cardWidth
 
       // 右端に到達した場合、最初のセクションの同じ位置にジャンプ
       if (scrollLeft >= maxScroll - 10) {
