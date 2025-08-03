@@ -13,7 +13,7 @@ export default function TechEnvironment() {
     {
       title: "最新LLM技術の戦略的活用",
       description:
-        "GPT-4、Claude、Geminiなど主要LLMサービスを適材適所で使い分け、各々の強みを最大化したハイブリッドAIシステムを構築。LangChainフレームワークとベクトルデータベース（Pinecone、Chroma）を組み合わせることで、クライアントの企業データと連携した高精度なRAGシステムを短期間で実装しています。",
+        "主要LLMサービスを適材適所で使い分け、各々の強みを最大化したハイブリッドAIシステムを構築。LangChainフレームワークとベクトルデータベース（Pinecone、Chroma）を組み合わせることで、クライアントの企業データと連携した高精度なRAGシステムを短期間で実装しています。",
       icon: <Code className="h-8 w-8" />,
       color: "#68a9cf",
     },

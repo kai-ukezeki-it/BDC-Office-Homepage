@@ -154,9 +154,9 @@ export default function Members() {
       nameJa: "請関 海",
       nameEn: "Kai Ukezeki",
       description:
-        "同志社大学在学中(2022年)にECコンサルを開始し、その後フリーランスとして中小企業での業務効率化支援・システム開発を経験。2024年からはAI事業の立ち上げとPMを行う。",
+        "同志社大学在学中（2022年）にECコンサルを開始し、その後フリーランスとして中小企業での業務効率化支援・システム開発を経験。2024年からAI事業の立ち上げ・PMを行う。",
       sns: "なし",
-      image: "/placeholder.svg?height=400&width=300",
+      image: "/member-ukezeki.jpeg",
     },
     {
       position: "ー",
@@ -165,7 +165,7 @@ export default function Members() {
       description:
         "大学3年次にフリーランスとして受託でEC系システムの開発を開始、Amazonデータダッシュボードや統合ECシステムを設計・運用する。その後、財務系・法務系業務へのAI組み込みを行う。",
       sns: "なし",
-      image: "/placeholder.svg?height=400&width=300",
+      image: "/member-matsumoto.png",
     },
     {
       position: "ー",
@@ -174,7 +174,7 @@ export default function Members() {
       description:
         "完全未経験からノーコードによるPoCプロトタイプ開発から始まり、たった数ヶ月で基本言語を習得。現在は大規模言語モデルを活用したRAGシステムの設計・実装を担当し、業界特化型AIアプリケーションの開発を行う。",
       sns: "なし",
-      image: "/placeholder.svg?height=400&width=300",
+      image: "/member-kawabata.jpeg",
     },
   ]
 
