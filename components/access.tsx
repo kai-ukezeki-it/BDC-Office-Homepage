@@ -40,6 +40,7 @@ export default function Access() {
                       alt="興戸アプリ開発ラボ BDC オフィス外観"
                       fill
                       quality={70}
+                      loading="lazy"
                       placeholder="blur"
                       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -61,6 +62,7 @@ export default function Access() {
                         alt="オフィス詳細画像1"
                         fill
                         quality={70}
+                        loading="lazy"
                         placeholder="blur"
                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -80,6 +82,7 @@ export default function Access() {
                         alt="オフィス詳細画像2"
                         fill
                         quality={70}
+                        loading="lazy"
                         placeholder="blur"
                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                         className="object-cover transition-transform duration-700 group-hover:scale-110"

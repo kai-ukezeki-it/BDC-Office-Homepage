@@ -111,6 +111,7 @@ function InfiniteScrollMembers({ members }: { members: any[] }) {
                     alt={member.nameJa} 
                     fill 
                     quality={70}
+                    loading="lazy"
                     placeholder="blur"
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                     className="object-cover" 

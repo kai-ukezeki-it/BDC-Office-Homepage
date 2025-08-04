@@ -302,6 +302,14 @@ export default function ContactForm() {
                   <Send className="h-5 w-5" />
                   送信する
                 </Button>
+                
+                <p className="text-xs text-white/70 mt-3 text-center leading-relaxed">
+                  送信時に
+                  <a href="/privacy" className="text-[#a1d8e2] hover:text-[#ffdc00] underline transition-colors duration-300">
+                    プライバシーポリシー
+                  </a>
+                  にご同意いただいたものとします
+                </p>
               </form>
             )}
           </div>
