@@ -39,8 +39,9 @@ export default function Access() {
                       src="/office-main.png"
                       alt="興戸アプリ開発ラボ BDC オフィス外観"
                       fill
-                      quality={70}
+                      quality={85}
                       loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       placeholder="blur"
                       blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -61,8 +62,9 @@ export default function Access() {
                         src="/office-sub-left.png"
                         alt="オフィス詳細画像1"
                         fill
-                        quality={70}
+                        quality={85}
                         loading="lazy"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
                         placeholder="blur"
                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -81,8 +83,9 @@ export default function Access() {
                         src="/office-sub-right.png"
                         alt="オフィス詳細画像2"
                         fill
-                        quality={70}
+                        quality={85}
                         loading="lazy"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
                         placeholder="blur"
                         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                         className="object-cover transition-transform duration-700 group-hover:scale-110"

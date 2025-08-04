@@ -153,7 +153,8 @@ export default function Hero() {
            alt="Hero background"
            fill
            priority
-           quality={70}
+           quality={85}
+           sizes="100vw"
            placeholder="blur"
            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
            className="object-cover"

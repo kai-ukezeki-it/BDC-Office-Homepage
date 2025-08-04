@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* スムーズスクロール最適化 */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+/* iOS Safari用の慣性スクロール強化 */
+.ios-momentum-scroll {
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* ハードウェアアクセラレーション */
+.hw-accelerated {
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
