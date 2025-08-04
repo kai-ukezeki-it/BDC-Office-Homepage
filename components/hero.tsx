@@ -1,4 +1,10 @@
+"use client"
+import Image from "next/image"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
+
 export default function Hero() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
     <section className="relative w-full min-h-[100vh] flex flex-col justify-center overflow-hidden bg-gradient-to-br from-custom-950 via-custom-900 to-custom-800 text-white">
       {/* トップナビゲーション */}
@@ -6,12 +12,14 @@ export default function Hero() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <a
             href="#"
-            className="text-white font-bold text-xl hover:text-[#ffdc00] transition-all duration-300 transform hover:scale-105"
+            className="text-white font-bold text-lg md:text-xl hover:text-[#ffdc00] transition-all duration-300 transform hover:scale-105"
           >
             興戸アプリ開発ラボ BDC
           </a>
-          <nav>
-            <ul className="flex items-center gap-2 sm:gap-6">
+
+          {/* デスクトップナビゲーション */}
+          <nav className="hidden lg:block">
+            <ul className="flex items-center gap-6">
               <li>
                 <a
                   href="#mission"
@@ -57,22 +65,99 @@ export default function Hero() {
                   href="#contact"
                   className="bg-[#ffdc00] text-custom-950 hover:bg-[#ffdc00]/90 px-4 py-2 text-sm font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  お問い合わせ
+                  メンバー募集・お問い合わせ
                 </a>
               </li>
             </ul>
           </nav>
+
+          {/* モバイルハンバーガーボタン */}
+          <button
+            className="lg:hidden text-white hover:text-[#ffdc00] transition-colors duration-300"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="メニューを開く"
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
+
+        {/* モバイルメニュー */}
+        {isMenuOpen && (
+          <div className="lg:hidden bg-[#302833] border-t border-[#a1d8e2]/20">
+            <nav className="container mx-auto px-4 py-4">
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="#mission"
+                    className="block text-white hover:text-[#ffdc00] px-4 py-3 text-base font-medium hover:bg-white/10 rounded-lg transition-all duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    コンセプト
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#business-content"
+                    className="block text-white hover:text-[#ffdc00] px-4 py-3 text-base font-medium hover:bg-white/10 rounded-lg transition-all duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    事業内容
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#tech-environment"
+                    className="block text-white hover:text-[#ffdc00] px-4 py-3 text-base font-medium hover:bg-white/10 rounded-lg transition-all duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    技術・開発環境
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#members"
+                    className="block text-white hover:text-[#ffdc00] px-4 py-3 text-base font-medium hover:bg-white/10 rounded-lg transition-all duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    メンバー紹介
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#access"
+                    className="block text-white hover:text-[#ffdc00] px-4 py-3 text-base font-medium hover:bg-white/10 rounded-lg transition-all duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    アクセス
+                  </a>
+                </li>
+                <li className="pt-2">
+                  <a
+                    href="#contact"
+                    className="block bg-[#ffdc00] text-custom-950 hover:bg-[#ffdc00]/90 px-4 py-3 text-base font-bold rounded-lg transition-all duration-300 text-center"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    メンバー募集・お問い合わせ
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        )}
       </div>
 
       <div className="absolute inset-0 z-0">
-        {/* 背景画像 */}
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/hero-background-new.png')",
-          }}
-        ></div>
+        {/* 背景画像 (Next.js 画像最適化) */}
+                 <Image
+           src="/hero-background-new.png"
+           alt="Hero background"
+           fill
+           priority
+           quality={70}
+           placeholder="blur"
+           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+           className="object-cover"
+         />
 
         {/* 動的グラデーションオーバーレイ */}
         <div className="absolute inset-0 bg-gradient-to-br from-custom-950/90 via-custom-900/85 to-[#68a9cf]/40 z-10"></div>

@@ -39,6 +39,9 @@ export default function Access() {
                       src="/office-main.png"
                       alt="興戸アプリ開発ラボ BDC オフィス外観"
                       fill
+                      quality={70}
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-custom-950/50 to-transparent"></div>
@@ -57,6 +60,9 @@ export default function Access() {
                         src="/office-sub-left.png"
                         alt="オフィス詳細画像1"
                         fill
+                        quality={70}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-custom-950/30 to-transparent"></div>
@@ -70,9 +76,12 @@ export default function Access() {
                   <div className="relative rounded-xl overflow-hidden shadow-xl">
                     <div className="aspect-[4/3] w-full">
                       <Image
-                        src="/placeholder.svg"
+                        src="/office-sub-right.png"
                         alt="オフィス詳細画像2"
                         fill
+                        quality={70}
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-custom-950/30 to-transparent"></div>

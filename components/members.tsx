@@ -106,7 +106,15 @@ function InfiniteScrollMembers({ members }: { members: any[] }) {
               <div className="flex flex-col items-center text-center" style={{ width: "170px" }}>
                 {/* メンバー写真 */}
                 <div className="w-[150px] h-[150px] relative overflow-hidden rounded-xl bg-gray-200 mb-4">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.nameJa} fill className="object-cover" />
+                  <Image 
+                    src={member.image || "/placeholder.svg"} 
+                    alt={member.nameJa} 
+                    fill 
+                    quality={70}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                    className="object-cover" 
+                  />
                 </div>
 
                 {/* 名前 */}
@@ -172,7 +180,7 @@ export default function Members() {
       nameJa: "川畑 一輝",
       nameEn: "Ikki Kawabata",
       description:
-        "完全未経験からノーコードによるPoCプロトタイプ開発から始まり、たった数ヶ月で基本言語を習得。現在は大規模言語モデルを活用したRAGシステムの設計・実装を担当し、業界特化型AIアプリケーションの開発を行う。",
+        "完全未経験からノーコードによるPoCプロトタイプ開発から始まり、数ヶ月で基本言語を習得。現在はLLMを活用したRAGシステムの設計・実装を担当し、業界特化型AIアプリケーションの開発を行う。",
       sns: "なし",
       image: "/member-kawabata.jpeg",
     },

@@ -95,15 +95,16 @@ export default function Footer() {
         <div className="border-t border-gray-700/50 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} 興戸アプリ開発ラボ BDC. All rights reserved.
+              &copy; {new Date().getFullYear()} 興戸アプリ開発ラボ（BDCプロジェクト）
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-gray-400 hover:text-[#a1d8e2] transition-colors duration-300 text-sm">
                 プライバシーポリシー
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-[#68a9cf] transition-colors duration-300 text-sm">
+              {/* 利用規約を一時的に非表示 */}
+              {/* <Link href="/terms" className="text-gray-400 hover:text-[#68a9cf] transition-colors duration-300 text-sm">
                 利用規約
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

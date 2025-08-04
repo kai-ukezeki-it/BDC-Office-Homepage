@@ -82,17 +82,94 @@ export default function ContactForm() {
     >
       <div className="container px-4 mx-auto relative z-10">
         {/* セクションヘッダー */}
-        <div className="text-center mb-12 animate-on-scroll">
+        <div className="text-center mb-16 animate-on-scroll">
           <div className="inline-flex items-center mb-6">
             <div className="w-8 h-1 bg-[#a1d8e2] mr-3"></div>
-            <span className="text-[#a1d8e2] font-bold text-lg tracking-wider uppercase">Contact</span>
+            <span className="text-[#a1d8e2] font-bold text-lg tracking-wider uppercase">Member & Contact</span>
             <div className="w-8 h-1 bg-[#68a9cf] ml-3"></div>
           </div>
-          <h2 className="text-4xl md:text-6xl font-black mb-8 text-white">お問い合わせ</h2>
+          <h2 className="text-4xl md:text-6xl font-black mb-8 text-white">メンバー募集・お問い合わせ</h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
             興戸アプリ開発ラボ BDCに興味を持っていただきありがとうございます。
             参加希望、ご質問など、お気軽にお問い合わせください。
           </p>
+        </div>
+
+        {/* 学生メンバー募集セクション */}
+        <div className="max-w-5xl mx-auto mb-16 animate-on-scroll">
+          <div className="bg-white/20 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-white/30 p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-white mb-4 drop-shadow-lg">メンバー募集</h3>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* 募集ポジション・報酬 */}
+              <div className="bg-white/25 rounded-2xl p-6 border border-white/30 shadow-lg">
+                <h4 className="text-xl font-bold text-white mb-4 flex items-center drop-shadow-sm">
+                  <div className="w-3 h-3 bg-[#68a9cf] rounded-full mr-3 shadow-sm"></div>
+                  募集ポジション・業務委託報酬
+                </h4>
+                <div className="space-y-4">
+                  <div className="border-l-4 border-[#68a9cf] pl-4 bg-white/10 rounded-r-lg py-3">
+                    <h5 className="text-lg font-bold text-white mb-1 drop-shadow-sm">エンジニア</h5>
+                    <p className="text-white font-bold text-lg drop-shadow-sm">報酬 1,000~5,000円/時間</p>
+                  </div>
+                  <div className="border-l-4 border-[#68a9cf] pl-4 bg-white/10 rounded-r-lg py-3">
+                    <h5 className="text-lg font-bold text-white mb-1 drop-shadow-sm">マネジメント</h5>
+                    <p className="text-white font-bold text-lg drop-shadow-sm">報酬 1,500~5,000円/時間</p>
+                  </div>
+                  <div className="bg-white/20 rounded-lg p-4 mt-4 border border-white/20">
+                    <p className="text-white font-medium drop-shadow-sm">
+                      <span className="font-bold text-white">稼働時間：</span>週20時間〜 | 
+                      <span className="font-bold text-white ml-2">勤務形態：</span>週2回オフィス + 自由
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 求めるスキル */}
+              <div className="bg-white/25 rounded-2xl p-6 border border-white/30 shadow-lg">
+                <h4 className="text-xl font-bold text-white mb-4 flex items-center drop-shadow-sm">
+                  <div className="w-3 h-3 bg-[#68a9cf] rounded-full mr-3 shadow-sm"></div>
+                  求めるスキル・条件
+                </h4>
+                <div className="space-y-4">
+                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
+                    <h5 className="text-lg font-bold text-white mb-3 drop-shadow-sm">必要要件</h5>
+                    <ul className="space-y-2 text-white font-medium">
+                      <li className="flex items-start drop-shadow-sm">
+                        <span className="text-[#68a9cf] mr-3 font-bold text-lg">•</span>
+                        最低限のプログラミング経験
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
+                    <h5 className="text-lg font-bold text-white mb-3 drop-shadow-sm">歓迎要件</h5>
+                    <ul className="space-y-2 text-white font-medium">
+                      <li className="flex items-start drop-shadow-sm">
+                        <span className="text-[#68a9cf] mr-3 font-bold text-lg">•</span>
+                        1年以上の開発実務経験
+                      </li>
+                      <li className="flex items-start drop-shadow-sm">
+                        <span className="text-[#68a9cf] mr-3 font-bold text-lg">•</span>
+                        クライアントワーク経験
+                      </li>
+                      <li className="flex items-start drop-shadow-sm">
+                        <span className="text-[#68a9cf] mr-3 font-bold text-lg">•</span>
+                        要件定義、ヒアリング能力
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-8 bg-white/15 rounded-xl p-4 border border-white/25">
+              <p className="text-white text-lg font-medium drop-shadow-sm">
+                ご興味をお持ちの方は、下記のお問い合わせフォームからご連絡ください
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -212,7 +289,7 @@ export default function ContactForm() {
                     value={formState.message}
                     onChange={handleChange}
                     required
-                    placeholder="具体的なご相談内容、参加動機、協業内容などをご記入ください"
+                    placeholder="具体的なご相談内容、参加動機などをご記入ください"
                     rows={6}
                     className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-[#ffdc00] focus:ring-[#ffdc00] rounded-xl"
                   />
