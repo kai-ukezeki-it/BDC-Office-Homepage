@@ -39,7 +39,7 @@ export default function Access() {
                       src="/office-main.png"
                       alt="興戸アプリ開発ラボ BDC オフィス外観"
                       fill
-                      quality={85}
+                      quality={30}
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       placeholder="blur"
@@ -62,7 +62,7 @@ export default function Access() {
                         src="/office-sub-left.png"
                         alt="オフィス詳細画像1"
                         fill
-                        quality={85}
+                        quality={30}
                         loading="lazy"
                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
                         placeholder="blur"
@@ -83,7 +83,7 @@ export default function Access() {
                         src="/office-sub-right.png"
                         alt="オフィス詳細画像2"
                         fill
-                        quality={85}
+                        quality={30}
                         loading="lazy"
                         sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
                         placeholder="blur"

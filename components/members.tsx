@@ -9,67 +9,46 @@ function InfiniteScrollMembers({ members }: { members: any[] }) {
   const [isDragging, setIsDragging] = useState(false)
   const [startX, setStartX] = useState(0)
   const [scrollLeft, setScrollLeft] = useState(0)
-  const [isMobile, setIsMobile] = useState(false)
 
   // 無限スクロール用に配列を3倍に複製
   const infiniteMembers = [...members, ...members, ...members]
-
-  // モバイル判定
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
 
   useEffect(() => {
     const scrollContainer = scrollRef.current
     if (!scrollContainer) return
 
-    if (isMobile) {
-      // スマホ用：スムーズスクロール設定
-      scrollContainer.style.scrollBehavior = 'smooth'
-      scrollContainer.style.overflowX = 'scroll'
-      scrollContainer.style.scrollSnapType = 'x mandatory'
-      scrollContainer.style.webkitOverflowScrolling = 'touch'
-    } else {
-      // PC用：元の無限スクロール設定
-      const cardWidth = 450 + 32 // カード幅(450px) + gap(32px) 
-      const sectionWidth = members.length * cardWidth
-      scrollContainer.scrollLeft = sectionWidth // 2番目のセットの開始位置
+    // PC用：元の無限スクロール設定
+    const cardWidth = 450 + 32 // カード幅(450px) + gap(32px) 
+    const sectionWidth = members.length * cardWidth
+    scrollContainer.scrollLeft = sectionWidth // 2番目のセットの開始位置
 
-      const handleScroll = () => {
-        const { scrollLeft, scrollWidth, clientWidth } = scrollContainer
-        const maxScroll = scrollWidth - clientWidth
+    const handleScroll = () => {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainer
+      const maxScroll = scrollWidth - clientWidth
 
-        // 右端に到達した場合、最初のセクションの同じ位置にジャンプ
-        if (scrollLeft >= maxScroll - 10) {
-          scrollContainer.scrollLeft = sectionWidth + (scrollLeft - maxScroll)
-        }
-        // 左端に到達した場合、最後のセクションの同じ位置にジャンプ
-        else if (scrollLeft <= 10) {
-          scrollContainer.scrollLeft = sectionWidth + scrollLeft
-        }
+      // 右端に到達した場合、最初のセクションの同じ位置にジャンプ
+      if (scrollLeft >= maxScroll - 10) {
+        scrollContainer.scrollLeft = sectionWidth + (scrollLeft - maxScroll)
       }
-
-      scrollContainer.addEventListener("scroll", handleScroll)
-      return () => scrollContainer.removeEventListener("scroll", handleScroll)
+      // 左端に到達した場合、最後のセクションの同じ位置にジャンプ
+      else if (scrollLeft <= 10) {
+        scrollContainer.scrollLeft = sectionWidth + scrollLeft
+      }
     }
-  }, [members.length, isMobile])
 
-  // マウスドラッグ処理（PCのみ）
+    scrollContainer.addEventListener("scroll", handleScroll)
+    return () => scrollContainer.removeEventListener("scroll", handleScroll)
+  }, [members.length])
+
+  // マウスドラッグ処理
   const handleMouseDown = (e: React.MouseEvent) => {
-    if (isMobile) return
     setIsDragging(true)
     setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0))
     setScrollLeft(scrollRef.current?.scrollLeft || 0)
   }
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !scrollRef.current || isMobile) return
+    if (!isDragging || !scrollRef.current) return
     e.preventDefault()
     const x = e.pageX - (scrollRef.current.offsetLeft || 0)
     const walk = (x - startX) * 2
@@ -80,16 +59,15 @@ function InfiniteScrollMembers({ members }: { members: any[] }) {
     setIsDragging(false)
   }
 
-  // タッチ処理（PCのみ、スマホはネイティブスクロール）
+  // タッチ処理
   const handleTouchStart = (e: React.TouchEvent) => {
-    if (isMobile) return
     setIsDragging(true)
     setStartX(e.touches[0].pageX - (scrollRef.current?.offsetLeft || 0))
     setScrollLeft(scrollRef.current?.scrollLeft || 0)
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || !scrollRef.current || isMobile) return
+    if (!isDragging || !scrollRef.current) return
     const x = e.touches[0].pageX - (scrollRef.current.offsetLeft || 0)
     const walk = (x - startX) * 2
     scrollRef.current.scrollLeft = scrollLeft - walk
@@ -101,9 +79,10 @@ function InfiniteScrollMembers({ members }: { members: any[] }) {
 
   return (
     <div className="relative animate-on-scroll">
+      {/* PC版：無限スクロール */}
       <div
         ref={scrollRef}
-        className={`overflow-x-auto scrollbar-hide ${isMobile ? 'smooth-scroll ios-momentum-scroll hw-accelerated' : 'cursor-grab active:cursor-grabbing'}`}
+        className="hidden md:block overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
@@ -118,14 +97,13 @@ function InfiniteScrollMembers({ members }: { members: any[] }) {
         onTouchEnd={handleTouchEnd}
       >
         <div className="flex gap-8 pb-4" style={{ width: "max-content" }}>
-          {(isMobile ? members : infiniteMembers).map((member, index) => (
+          {infiniteMembers.map((member, index) => (
             <div
               key={`${member.nameJa}-${index}`}
               className="bg-white/10 backdrop-blur-sm border-2 border-gray-500/20 rounded-2xl p-6 transition-all duration-500 hover:shadow-glow-sm hover:border-blue-400/40 flex-shrink-0 select-none flex gap-6"
               style={{ 
                 width: "450px", 
-                height: "280px",
-                ...(isMobile && { scrollSnapAlign: "start" })
+                height: "280px"
               }}
             >
               {/* 左側：写真+名前+役職 */}
@@ -136,7 +114,7 @@ function InfiniteScrollMembers({ members }: { members: any[] }) {
                     src={member.image || "/placeholder.svg"} 
                     alt={member.nameJa} 
                     fill 
-                    quality={85}
+                    quality={30}
                     loading="lazy"
                     sizes="150px"
                     placeholder="blur"
@@ -175,10 +153,74 @@ function InfiniteScrollMembers({ members }: { members: any[] }) {
         </div>
       </div>
 
+      {/* スマホ版：シンプルスクロール */}
+      <div className="md:hidden overflow-x-scroll scrollbar-hide smooth-scroll ios-momentum-scroll hw-accelerated">
+        <div className="flex gap-4 pb-4 px-4" style={{ width: "max-content" }}>
+          {members.map((member, index) => (
+            <div
+              key={`${member.nameJa}-${index}`}
+              className="bg-white/10 backdrop-blur-sm border-2 border-gray-500/20 rounded-2xl p-4 transition-all duration-300 hover:shadow-glow-sm hover:border-blue-400/40 flex-shrink-0 flex flex-col gap-4"
+              style={{ 
+                width: "280px", 
+                height: "auto",
+                minHeight: "320px",
+                scrollSnapAlign: "start"
+              }}
+            >
+              {/* 上部：写真+名前+役職 */}
+              <div className="flex flex-col items-center text-center w-full">
+                {/* メンバー写真 */}
+                <div className="w-[120px] h-[120px] relative overflow-hidden rounded-xl bg-gray-200 mb-4">
+                  <Image 
+                    src={member.image || "/placeholder.svg"} 
+                    alt={member.nameJa} 
+                    fill 
+                    quality={30}
+                    loading="lazy"
+                    sizes="120px"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                    className="object-cover" 
+                  />
+                </div>
+
+                {/* 名前 */}
+                <h3 className="text-base font-bold text-white mb-1 leading-tight">{member.nameJa}</h3>
+                <div className="text-xs text-gray-300 mb-2">{member.nameEn}</div>
+
+                {/* 役職 */}
+                <div className="text-xs text-blue-300 font-medium px-2 py-1 bg-blue-500/20 rounded-full">
+                  {member.position}
+                </div>
+              </div>
+
+              {/* 下部：説明文+SNS */}
+              <div className="flex-1 flex flex-col justify-between">
+                {/* 説明文 */}
+                <div>
+                  <p className="text-xs text-gray-300 leading-relaxed">{member.description}</p>
+                </div>
+
+                {/* SNS - 下部 */}
+                <div className="border-t border-gray-600/30 pt-3 mt-4">
+                  <div className="text-xs text-gray-400 mb-1">Contact</div>
+                  <div className="text-xs text-blue-300 hover:text-blue-200 transition-colors cursor-pointer">
+                    {member.sns}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* スクロールヒント */}
       <div className="text-center mt-6">
-        <span className="text-sm font-medium text-blue-300">
-          {isMobile ? "← スワイプしてメンバーを見る →" : "← ドラッグして全メンバーを見る →"}
+        <span className="text-sm font-medium text-blue-300 hidden md:block">
+          ← ドラッグして全メンバーを見る →
+        </span>
+        <span className="text-sm font-medium text-blue-300 md:hidden">
+          ← スワイプしてメンバーを見る →
         </span>
       </div>
     </div>

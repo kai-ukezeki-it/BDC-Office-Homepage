@@ -44,36 +44,12 @@ export default function RootLayout({
   return (
     <html lang="ja" suppressHydrationWarning>
       <head>
-        {/* 重要な画像のプリロード */}
+        {/* ヒーロー画像のみプリロード（軽量化済み） */}
         <link
           rel="preload"
           as="image"
           href="/hero-background-new.png"
           type="image/png"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/office-main.png"
-          type="image/png"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/member-ukezeki.jpeg"
-          type="image/jpeg"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/member-matsumoto.png"
-          type="image/png"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/member-kawabata.jpeg"
-          type="image/jpeg"
         />
       </head>
       <body className={inter.className}>
