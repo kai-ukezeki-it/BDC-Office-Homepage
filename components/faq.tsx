@@ -41,7 +41,7 @@ export default function Faq() {
           <h2 className="text-4xl md:text-6xl font-black mb-8 text-custom-950">よくある質問</h2>
           <div className="w-20 h-1 bg-[#a1d8e2] mx-auto mb-8"></div>
           <p className="text-xl text-custom-700 max-w-3xl mx-auto">
-            興戸アプリ開発ラボ BDCについてよくいただく質問をまとめました。
+            京田辺ラボ BDCについてよくいただく質問をまとめました。
             他にも質問がある方は、お気軽にお問い合わせください。
           </p>
         </div>

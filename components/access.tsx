@@ -22,7 +22,7 @@ export default function Access() {
           </div>
           <h2 className="text-4xl md:text-6xl font-black mb-8 text-custom-950">アクセス</h2>
           <p className="text-xl text-custom-700 max-w-3xl mx-auto leading-relaxed">
-            興戸アプリ開発ラボ BDCへのアクセス方法をご案内します。
+            京田辺ラボ BDCへのアクセス方法をご案内します。
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export default function Access() {
                   <div className="aspect-[16/9] w-full">
                     <Image
                       src="/office-main.png"
-                      alt="興戸アプリ開発ラボ BDC オフィス外観"
+                      alt="京田辺ラボ BDC オフィス外観"
                       fill
                       quality={30}
                       loading="lazy"

@@ -7,24 +7,24 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "興戸アプリ開発ラボ BDC | AI駆動開発で未来を創る学生エンジニア集団",
-  description: "興戸アプリ開発ラボ BDCは、同志社大学京田辺キャンパスを拠点とするAI・システム開発サークル。理工学部情報工学科・電子工学科・電気工学科・インテリジェント情報工学科・情報システムデザイン学科の学生が中心となり、企業向けAIエージェント・基幹システム統合・アプリ開発を手がける学生エンジニア集団です。",
-  keywords: "アプリ開発, 興戸, 同志社大学, サークル, AI, 研究会, システム開発, インターン, 京田辺, duet 同志社, single sign on 同志社, F率 同志社, 同志社前, 理工学部, 電子工学科, 電気工学科, 情報工学科, インテリジェント情報工学科, 情報システムデザイン学科, 京田辺キャンパス, 学生エンジニア, AIエージェント, 機械学習, プログラミング, Web開発, Python, React, Next.js, 同志社大学生, 開発サークル, AIサークル, プログラミングサークル, 学研都市, 同志社システム開発, 同志社アプリ開発",
-  authors: [{ name: "興戸アプリ開発ラボ BDC" }],
-  creator: "興戸アプリ開発ラボ BDC",
-  publisher: "興戸アプリ開発ラボ BDC",
+  title: "京田辺ラボ BDC | 同志社大学生（京田辺）のエンジニア組織",
+  description: "京田辺ラボ BDCは、AI駆動開発を軸とし企業のビジネス課題を解決する学生エンジニア組織です。財務・会計系AIエージェント、基幹システム統合、EC系システム開発を手がけています。",
+  keywords: "AI開発, 学生エンジニア, システム開発, 京田辺, 同志社大学, AIエージェント, EC系システム",
+  authors: [{ name: "京田辺ラボ BDC" }],
+  creator: "京田辺ラボ BDC",
+  publisher: "京田辺ラボ BDC",
   openGraph: {
-    title: "興戸アプリ開発ラボ BDC | 同志社大学京田辺キャンパス発AI開発サークル",
-    description: "同志社大学理工学部を中心とした学生によるAI・システム開発サークル。アプリ開発からAIエージェント開発まで幅広く手がける学生エンジニア集団",
+    title: "京田辺ラボ BDC | 同志社大学生（京田辺）のエンジニア組織",
+    description: "AI駆動開発により企業のビジネス課題を解決する学生エンジニア組織",
     url: "https://bdc-office.railway.app",
-    siteName: "興戸アプリ開発ラボ BDC",
+    siteName: "京田辺ラボ BDC",
     locale: "ja_JP",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "興戸アプリ開発ラボ BDC | 同志社大学AI開発サークル",
-    description: "同志社大学京田辺キャンパス発のAI・アプリ開発サークル。理工学部学生が中心の学生エンジニア集団",
+    title: "京田辺ラボ BDC",
+    description: "AI駆動開発で未来を創る学生エンジニア集団",
   },
   robots: {
     index: true,
@@ -59,9 +59,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "興戸アプリ開発ラボ BDC",
+              "name": "京田辺ラボ BDC",
               "alternateName": "BDC",
-              "description": "同志社大学京田辺キャンパスを拠点とするAI・システム開発サークル",
+              "description": "同志社大学京田辺キャンパスを拠点とする学生エンジニア組織",
               "url": "https://bdc-office.railway.app",
               "logo": "https://bdc-office.railway.app/BDC-office icon.png",
               "foundingDate": "2024",

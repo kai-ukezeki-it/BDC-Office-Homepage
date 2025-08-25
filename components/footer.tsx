@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="lg:col-span-2 animate-on-scroll">
             <div className="mb-6">
               <h3 className="text-3xl font-black bg-gradient-to-r from-[#a1d8e2] to-[#ffdc00] bg-clip-text text-transparent">
-                興戸アプリ開発ラボ BDC
+                京田辺ラボ BDC
               </h3>
             </div>
             <p className="text-gray-300 mb-4 max-w-md leading-relaxed">
@@ -95,7 +95,7 @@ export default function Footer() {
         <div className="border-t border-gray-700/50 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} 興戸アプリ開発ラボ（BDCプロジェクト）
+              &copy; {new Date().getFullYear()} 京田辺ラボ BDC. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-gray-400 hover:text-[#a1d8e2] transition-colors duration-300 text-sm">

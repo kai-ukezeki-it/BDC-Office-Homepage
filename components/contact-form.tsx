@@ -90,8 +90,8 @@ export default function ContactForm() {
           </div>
           <h2 className="text-4xl md:text-6xl font-black mb-8 text-white">メンバー募集・お問い合わせ</h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            興戸アプリ開発ラボ BDCに興味を持っていただきありがとうございます。
-            参加希望、ご質問など、お気軽にお問い合わせください。
+            京田辺ラボ BDCに興味を持っていただきありがとうございます。
+            参加希望、協業のご相談、ご質問など、お気軽にお問い合わせください。
           </p>
         </div>
 

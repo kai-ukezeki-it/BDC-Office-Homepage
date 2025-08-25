@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
 
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
             <p className="mb-6">
-              興戸アプリ開発ラボ BDC（以下「当ラボ」）は、ご利用者様の個人情報の保護に関して、以下のとおりプライバシーポリシーを定めます。
+              京田辺ラボ BDC（以下「当ラボ」）は、ご利用者様の個人情報の保護に関して、以下のとおりプライバシーポリシーを定めます。
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">1. 個人情報の収集について</h2>
@@ -77,7 +77,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">6. お問い合わせ窓口</h2>
             <p className="mb-4">個人情報の取扱いに関するお問い合わせは、以下までご連絡ください：</p>
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
-              <p className="font-semibold text-gray-900 mb-2">興戸アプリ開発ラボ BDC</p>
+              <p className="font-semibold text-gray-900 mb-2">京田辺ラボ BDC</p>
               <p>メール：<a href="mailto:itimainasuiti@gmail.com" className="text-[#68a9cf] hover:underline">itimainasuiti@gmail.com</a></p>
               <p>住所：〒610-0332 京都府京田辺市興戸和井田56-1 A&Kビル 201</p>
             </div>
@@ -90,7 +90,7 @@ export default function PrivacyPolicy() {
             <div className="mt-12 pt-8 border-t border-gray-200 text-center">
               <p className="text-gray-600">
                 <strong>制定日：2025年8月</strong><br />
-                興戸アプリ開発ラボ BDC
+                京田辺ラボ BDC
               </p>
             </div>
           </div>
