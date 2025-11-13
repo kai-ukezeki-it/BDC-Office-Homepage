@@ -14,7 +14,7 @@ export default function Hero() {
             href="#"
             className="text-white font-bold text-lg md:text-xl hover:text-[#ffdc00] transition-all duration-300 transform hover:scale-105"
           >
-            興戸アプリ開発ラボ BDC
+            京田辺ラボ BDC
           </a>
 
           {/* デスクトップナビゲーション */}

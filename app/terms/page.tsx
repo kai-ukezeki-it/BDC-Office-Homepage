@@ -26,7 +26,7 @@ export default function TermsOfService() {
 
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
             <p className="mb-6">
-              本利用規約（以下「本規約」）は、興戸アプリ開発ラボ BDC（以下「当ラボ」）が運営するWebサイト（以下「本サイト」）の利用条件を定めるものです。
+              本利用規約（以下「本規約」）は、京田辺ラボ BDC（以下「当ラボ」）が運営するWebサイト（以下「本サイト」）の利用条件を定めるものです。
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">第1条（適用）</h2>
@@ -88,7 +88,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">第10条（お問い合わせ）</h2>
             <p className="mb-4">本規約に関するお問い合わせは、以下までご連絡ください：</p>
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
-              <p className="font-semibold text-gray-900 mb-2">興戸アプリ開発ラボ BDC</p>
+              <p className="font-semibold text-gray-900 mb-2">京田辺ラボ BDC</p>
               <p>メール：<a href="mailto:itimainasuiti@gmail.com" className="text-[#68a9cf] hover:underline">itimainasuiti@gmail.com</a></p>
               <p>住所：〒610-0332 京都府京田辺市興戸和井田56-1 A&Kビル 201</p>
             </div>
@@ -96,7 +96,7 @@ export default function TermsOfService() {
             <div className="mt-12 pt-8 border-t border-gray-200 text-center">
               <p className="text-gray-600">
                 <strong>制定日：2025年8月</strong><br />
-                興戸アプリ開発ラボ BDC
+                京田辺ラボ BDC
               </p>
             </div>
           </div>

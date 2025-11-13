@@ -1,7 +1,7 @@
-# 興戸アプリ開発ラボ BDC 公式ホームページ
+# 京田辺ラボ BDC 公式ホームページ
 
 ## 概要
-興戸アプリ開発ラボ BDCの公式ウェブサイトです。Next.js 15 + TypeScript + Tailwind CSSで構築されています。
+京田辺ラボ BDCの公式ウェブサイトです。Next.js 15 + TypeScript + Tailwind CSSで構築されています。
 
 ## 技術スタック
 - **Frontend**: Next.js 15, React 19, TypeScript
@@ -130,7 +130,7 @@ git push origin main
 4. Railway の buildpack 設定確認
 
 ## ライセンス
-Private - 興戸アプリ開発ラボ BDC
+Private - 京田辺ラボ BDC
 
 ## お問い合わせ
 - Email: itimainasuiti@gmail.com
